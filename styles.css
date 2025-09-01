@@ -1,0 +1,470 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #0d1a26;
+    --secondary-color: #1e3a5f;
+    --accent-color: #3b82f6; /* Un azul vibrante para acentos */
+    --text-color: #e0e0e0;
+    --light-gray: #b0b0b0;
+    --card-bg: rgba(255, 255, 255, 0.05);
+    --border-color: rgba(255, 255, 255, 0.1);
+}
+
+@font-face {
+    font-family: 'Anta';
+    src: url('Anta-Regular.ttf') format('truetype');
+}
+
+body {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    font-family: 'Anta', sans-serif;
+    color: var(--text-color);
+    min-height: 100vh;
+    line-height: 1.6;
+    padding-top: 60px; /* Espacio para el header fijo */
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #60a5fa; /* Un azul más claro al pasar el mouse */
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: linear-gradient(90deg, rgba(20, 40, 60, 0.9), rgba(40, 80, 120, 0.9));
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid var(--border-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.title-header {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 40px;
+    margin-right: 15px;
+}
+
+.title-container h1 {
+    font-size: 1.8rem;
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.title-container .subtitle {
+    font-size: 0.8rem;
+    color: var(--light-gray);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+}
+
+.nav-menu {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav-list {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    padding: 0;
+}
+
+.nav-button {
+    font-family: 'Anta', sans-serif;
+    background: none;
+    border: none;
+    color: var(--text-color);
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-button:hover {
+    color: var(--accent-color);
+    transform: translateY(-2px);
+}
+
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+}
+
+.hamburger-line {
+    width: 100%;
+    height: 3px;
+    background-color: var(--text-color);
+    transition: all 0.3s ease-in-out;
+}
+
+.hamburger.active .hamburger-line:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .hamburger-line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active .hamburger-line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Contenido Principal */
+.main-container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.intro-section {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 4rem 2rem;
+    animation: fadeIn 1.5s ease-out;
+}
+
+.intro-title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #fff;
+    line-height: 1.2;
+}
+
+.intro-text {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 2rem;
+}
+
+.cta-button {
+    background-color: var(--accent-color);
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button:hover {
+    background-color: #60a5fa;
+    transform: translateY(-3px);
+}
+
+/* Secciones de Contenido */
+.card-menu, .projects-section {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 15px;
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.service-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.service-list li {
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.service-list li:hover {
+    transform: translateY(-5px);
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Nueva Sección de Proyectos */
+.projects-section {
+    text-align: center;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    justify-content: center;
+}
+
+.project-card {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+.project-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-info {
+    padding: 1.5rem;
+}
+
+.project-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.project-info p {
+    font-size: 1rem;
+    color: var(--light-gray);
+}
+
+/* Footer */
+.footer {
+    background: var(--primary-color);
+    padding: 2rem;
+    text-align: center;
+    border-top: 1px solid var(--border-color);
+    margin-top: 2rem;
+}
+
+.footer-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.contact-info p {
+    margin: 0.5rem 0;
+    color: var(--light-gray);
+}
+
+.copyright {
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Animación de Fade-In */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Ajustes para móviles */
+@media (max-width: 767px) {
+    .header {
+        padding: 1rem;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        gap: 0;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .nav-button {
+        padding: 1rem;
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to bottom, var(--secondary-color), var(--primary-color));
+        transform: translateX(100%);
+        transition: transform 0.4s ease-in-out;
+        padding-top: 20px;
+        z-index: 999;
+    }
+
+    .nav-menu.active {
+        transform: translateX(0);
+    }
+    
+    .hamburger {
+        display: flex;
+    }
+
+    .intro-title {
+        font-size: 2rem;
+    }
+    
+    .intro-text {
+        font-size: 1rem;
+    }
+    
+    .main-container {
+        padding: 1rem;
+    }
+    
+    .card-menu, .projects-section {
+        padding: 1.5rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .footer {
+        padding: 1.5rem;
+    }
+}
+
+/* Botón flotante de WhatsApp */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 4px 4px 8px #999;
+}
+
+.whatsapp-float svg {
+    width: 35px;
+    height: 35px;
+}
+
+/*
+ * Ajustes y corrección de los efectos de :hover y :focus.
+ */
+
+/* 1. Corrección del botón de navegación */
+/* Se elimina el box-shadow para que solo aplique el cambio de color y el levantamiento sutil */
+.nav-button:hover,
+.nav-button:focus {
+    color: var(--accent-color);
+    transform: translateY(-2px);
+    outline: none; /* Mantiene la eliminación del contorno predeterminado del navegador */
+}
+
+/* 2. Efecto de brillo para las tarjetas de servicios y proyectos */
+/* Ahora el efecto se aplica a las tarjetas individuales (li) y a las de proyectos */
+.service-list li:hover {
+    transform: translateY(-5px); /* Levanta el elemento al pasar el mouse */
+    background-color: rgba(0, 0, 0, 0.2); /* Mantiene el color de fondo */
+    box-shadow: 0 0 15px var(--accent-color), 0 0 25px var(--accent-color); /* Agrega el brillo */
+}
+
+.project-card:hover {
+    transform: scale(1.03); /* Levanta el elemento al pasar el mouse */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3), 0 0 15px var(--accent-color), 0 0 25px var(--accent-color); /* Agrega el brillo y mantiene la sombra original */
+}
+
+/* 3. Efecto para el botón de WhatsApp flotante */
+/* Se mantiene el efecto de brillo para el botón de WhatsApp */
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #25d366, 0 0 25px #25d366; /* Usa el color verde de WhatsApp */
+}
+
+/* Sección de Proyectos - Contenedor del Carrusel */
+#projectCarousel { /* Usamos el ID específico del carrusel */
+    border-radius: 15px; /* Aplica el redondeo directamente al contenedor del carrusel */
+    overflow: hidden; /* Muy importante para que el contenido dentro del carrusel respete el redondeo */
+    transition: box-shadow 0.3s ease-in-out; /* Transición para el efecto de brillo */
+    border: 1px solid var(--border-color); /* Mantiene el borde que ya tenías */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); /* Mantiene la sombra original */
+    margin: 2rem auto; /* Para centrarlo si lo necesitas, ajusta según tu layout */
+    max-width: 1200px; /* Si está dentro del main-container, si no, puedes quitarlo o ajustarlo */
+}
+
+#projectCarousel:hover {
+    box-shadow: 0 0 15px var(--accent-color), 0 0 25px var(--accent-color); /* El brillo con los mismos bordes redondeados */
+}
+
+/* También asegura que las imágenes dentro del carrusel respeten los bordes redondeados si sobresalen */
+.carousel-inner .carousel-item img {
+    border-radius: 15px; /* Aplica el redondeo a las imágenes dentro del carrusel */
+}
+
+/* Ajustes a la sección que contiene el carrusel (si los tenías) */
+.projects-section {
+    padding: 0; /* Quita el padding si la idea es que el carrusel ocupe todo el ancho de la sección */
+    background-color: transparent; /* Fondo transparente si el carrusel tiene su propio fondo */
+    border: none; /* Elimina el borde si el carrusel ya tiene uno */
+    box-shadow: none; /* Elimina la sombra si el carrusel ya tiene una */
+}
