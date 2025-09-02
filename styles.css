@@ -65,6 +65,26 @@ a:hover {
     margin-right: 15px;
 }
 
+.logo-mod {
+    /* Establece un ancho fijo para el logo, ajusta este valor según tus necesidades */
+    width: 200px; 
+    /* Permite que la altura se ajuste proporcionalmente para evitar distorsiones */
+    height: auto; 
+    /* Centra la imagen horizontalmente si el contenedor es más grande */
+    display: block; 
+    margin: 0 auto;
+    /* Añade un sutil borde redondeado para un aspecto más suave */
+    border-radius: 8px;
+    /* Agrega una transición suave para efectos como el hover */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Efecto al pasar el cursor sobre el logo (opcional) */
+.logo-mod:hover {
+    /* Agranda ligeramente el logo para crear un efecto interactivo */
+    transform: scale(1.05); 
+}
+
 .title-container h1 {
     font-size: 1.8rem;
     color: #fff;
