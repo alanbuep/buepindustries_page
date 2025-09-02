@@ -6,12 +6,14 @@
 
 :root {
     --primary-color: #0d1a26;
-    --secondary-color: #1e3a5f;
-    --accent-color: #3b82f6; /* Un azul vibrante para acentos */
+    --secondary-color: #2056ac;
+    --accent-color: #3b82f6;
     --text-color: #e0e0e0;
     --light-gray: #b0b0b0;
     --card-bg: rgba(255, 255, 255, 0.05);
     --border-color: rgba(255, 255, 255, 0.1);
+    --azul-logo: #286EB5;
+    --gris-logo: #888A8D;
 }
 
 @font-face {
@@ -25,7 +27,8 @@ body {
     color: var(--text-color);
     min-height: 100vh;
     line-height: 1.6;
-    padding-top: 60px; /* Espacio para el header fijo */
+    padding-top: 60px;
+    /* Espacio para el header fijo */
 }
 
 a {
@@ -35,7 +38,12 @@ a {
 }
 
 a:hover {
-    color: #60a5fa; /* Un azul más claro al pasar el mouse */
+    color: #60a5fa;
+    /* Un azul más claro al pasar el mouse */
+}
+
+p {
+    color: var(--light-gray);
 }
 
 /* Header */
@@ -44,7 +52,7 @@ a:hover {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    background: linear-gradient(90deg, rgba(20, 40, 60, 0.9), rgba(40, 80, 120, 0.9));
+    background: linear-gradient(90deg, rgba(20, 40, 60, 0.9), var(--azul-logo));
     backdrop-filter: blur(5px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     border-bottom: 1px solid var(--border-color);
@@ -67,11 +75,11 @@ a:hover {
 
 .logo-mod {
     /* Establece un ancho fijo para el logo, ajusta este valor según tus necesidades */
-    width: 200px; 
+    width: 200px;
     /* Permite que la altura se ajuste proporcionalmente para evitar distorsiones */
-    height: auto; 
+    height: auto;
     /* Centra la imagen horizontalmente si el contenedor es más grande */
-    display: block; 
+    display: block;
     margin: 0 auto;
     /* Añade un sutil borde redondeado para un aspecto más suave */
     border-radius: 8px;
@@ -82,12 +90,12 @@ a:hover {
 /* Efecto al pasar el cursor sobre el logo (opcional) */
 .logo-mod:hover {
     /* Agranda ligeramente el logo para crear un efecto interactivo */
-    transform: scale(1.05); 
+    transform: scale(1.05);
 }
 
 .title-container h1 {
     font-size: 1.8rem;
-    color: #fff;
+    color: var(--gris-logo);
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
@@ -98,7 +106,7 @@ a:hover {
     text-transform: uppercase;
 }
 
-.subtitle{
+.subtitle {
     padding-left: 10%;
 }
 
@@ -214,7 +222,8 @@ a:hover {
 }
 
 /* Secciones de Contenido */
-.card-menu, .projects-section {
+.card-menu,
+.projects-section {
     background-color: var(--card-bg);
     border: 1px solid var(--border-color);
     border-radius: 15px;
@@ -348,7 +357,7 @@ a:hover {
         align-items: center;
         width: 100%;
     }
-    
+
     .nav-button {
         padding: 1rem;
         width: 100%;
@@ -372,7 +381,7 @@ a:hover {
     .nav-menu.active {
         transform: translateX(0);
     }
-    
+
     .hamburger {
         display: flex;
     }
@@ -380,16 +389,17 @@ a:hover {
     .intro-title {
         font-size: 2rem;
     }
-    
+
     .intro-text {
         font-size: 1rem;
     }
-    
+
     .main-container {
         padding: 1rem;
     }
-    
-    .card-menu, .projects-section {
+
+    .card-menu,
+    .projects-section {
         padding: 1.5rem;
     }
 
@@ -442,53 +452,74 @@ a:hover {
 .nav-button:focus {
     color: var(--accent-color);
     transform: translateY(-2px);
-    outline: none; /* Mantiene la eliminación del contorno predeterminado del navegador */
+    outline: none;
+    /* Mantiene la eliminación del contorno predeterminado del navegador */
 }
 
 /* 2. Efecto de brillo para las tarjetas de servicios y proyectos */
 /* Ahora el efecto se aplica a las tarjetas individuales (li) y a las de proyectos */
 .service-list li:hover {
-    transform: translateY(-5px); /* Levanta el elemento al pasar el mouse */
-    background-color: rgba(0, 0, 0, 0.2); /* Mantiene el color de fondo */
-    box-shadow: 0 0 15px var(--accent-color), 0 0 25px var(--accent-color); /* Agrega el brillo */
+    transform: translateY(-5px);
+    /* Levanta el elemento al pasar el mouse */
+    background-color: rgba(0, 0, 0, 0.2);
+    /* Mantiene el color de fondo */
+    box-shadow: 0 0 15px var(--accent-color), 0 0 25px var(--accent-color);
+    /* Agrega el brillo */
 }
 
 .project-card:hover {
-    transform: scale(1.03); /* Levanta el elemento al pasar el mouse */
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3), 0 0 15px var(--accent-color), 0 0 25px var(--accent-color); /* Agrega el brillo y mantiene la sombra original */
+    transform: scale(1.03);
+    /* Levanta el elemento al pasar el mouse */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3), 0 0 15px var(--accent-color), 0 0 25px var(--accent-color);
+    /* Agrega el brillo y mantiene la sombra original */
 }
 
 /* 3. Efecto para el botón de WhatsApp flotante */
 /* Se mantiene el efecto de brillo para el botón de WhatsApp */
 .whatsapp-float:hover {
     transform: scale(1.1);
-    box-shadow: 0 0 15px #25d366, 0 0 25px #25d366; /* Usa el color verde de WhatsApp */
+    box-shadow: 0 0 15px #25d366, 0 0 25px #25d366;
+    /* Usa el color verde de WhatsApp */
 }
 
 /* Sección de Proyectos - Contenedor del Carrusel */
-#projectCarousel { /* Usamos el ID específico del carrusel */
-    border-radius: 15px; /* Aplica el redondeo directamente al contenedor del carrusel */
-    overflow: hidden; /* Muy importante para que el contenido dentro del carrusel respete el redondeo */
-    transition: box-shadow 0.3s ease-in-out; /* Transición para el efecto de brillo */
-    border: 1px solid var(--border-color); /* Mantiene el borde que ya tenías */
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); /* Mantiene la sombra original */
-    margin: 2rem auto; /* Para centrarlo si lo necesitas, ajusta según tu layout */
-    max-width: 1200px; /* Si está dentro del main-container, si no, puedes quitarlo o ajustarlo */
+#projectCarousel {
+    /* Usamos el ID específico del carrusel */
+    border-radius: 15px;
+    /* Aplica el redondeo directamente al contenedor del carrusel */
+    overflow: hidden;
+    /* Muy importante para que el contenido dentro del carrusel respete el redondeo */
+    transition: box-shadow 0.3s ease-in-out;
+    /* Transición para el efecto de brillo */
+    border: 1px solid var(--border-color);
+    /* Mantiene el borde que ya tenías */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    /* Mantiene la sombra original */
+    margin: 2rem auto;
+    /* Para centrarlo si lo necesitas, ajusta según tu layout */
+    max-width: 1200px;
+    /* Si está dentro del main-container, si no, puedes quitarlo o ajustarlo */
 }
 
 #projectCarousel:hover {
-    box-shadow: 0 0 15px var(--accent-color), 0 0 25px var(--accent-color); /* El brillo con los mismos bordes redondeados */
+    box-shadow: 0 0 15px var(--accent-color), 0 0 25px var(--accent-color);
+    /* El brillo con los mismos bordes redondeados */
 }
 
 /* También asegura que las imágenes dentro del carrusel respeten los bordes redondeados si sobresalen */
 .carousel-inner .carousel-item img {
-    border-radius: 15px; /* Aplica el redondeo a las imágenes dentro del carrusel */
+    border-radius: 15px;
+    /* Aplica el redondeo a las imágenes dentro del carrusel */
 }
 
 /* Ajustes a la sección que contiene el carrusel (si los tenías) */
 .projects-section {
-    padding: 0; /* Quita el padding si la idea es que el carrusel ocupe todo el ancho de la sección */
-    background-color: transparent; /* Fondo transparente si el carrusel tiene su propio fondo */
-    border: none; /* Elimina el borde si el carrusel ya tiene uno */
-    box-shadow: none; /* Elimina la sombra si el carrusel ya tiene una */
+    padding: 0;
+    /* Quita el padding si la idea es que el carrusel ocupe todo el ancho de la sección */
+    background-color: transparent;
+    /* Fondo transparente si el carrusel tiene su propio fondo */
+    border: none;
+    /* Elimina el borde si el carrusel ya tiene uno */
+    box-shadow: none;
+    /* Elimina la sombra si el carrusel ya tiene una */
 }
