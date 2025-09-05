@@ -1,236 +1,832 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Buep Industries - Expertos en ingeniería electrónica, eléctrica y automatización. Ofrecemos soluciones integrales en diseño, desarrollo e instalación de sistemas para clientes de alto nivel.">
-    <meta name="keywords"
-        content="ingeniería electrónica, ingeniería eléctrica, automatización, diseño PCB, IoT, PLC, tableros eléctricos, desarrollo de ingeniería, Buenos Aires">
+    <meta name="description" content="Buep Industries - Líderes en ingeniería electrónica, eléctrica y automatización industrial. Más de 15 años desarrollando soluciones tecnológicas innovadoras para empresas de alto nivel.">
+    <meta name="keywords" content="ingeniería electrónica, automatización industrial, diseño PCB, IoT industrial, PLC, tableros eléctricos, media tensión, ingeniería eléctrica, Buenos Aires, Argentina">
     <meta name="author" content="Buep Industries">
-    <title>Buep Industries - Ingeniería y Automatización</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles.css">
+    <meta property="og:title" content="Buep Industries - Ingeniería y Automatización Industrial">
+    <meta property="og:description" content="Soluciones integrales en ingeniería electrónica y automatización para la industria moderna">
+    <meta property="og:image" content="img/logo_v1.webp">
+    <meta property="og:url" content="https://www.buepindustries.com.ar">
+    <title>Buep Industries | Ingeniería Electrónica y Automatización Industrial</title>
     <link rel="icon" href="img/escudo_logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-
 <body>
-
-    <header class="header">
-        <div class="title-header">
-            <div class="title-container">
-                <a href="https://www.buepindustries.com.ar" class="logo">
-                    <img class="logo-mod" src="img/logo_v1.webp" alt="">
-                </a>
-                <p class="subtitle">Expertos en Ingeniería Electrónica, Eléctrica y Automatización</p>
+    
+    <div class="loader" id="loader">
+        <div class="loader-content">
+            <div class="loader-logo">
+                <img src="img/logo_v1.webp" alt="Buep Industries">
+            </div>
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
             </div>
         </div>
-        <nav class="navigation">
-            <button class="hamburger" id="hamburger" aria-label="Abrir menú de navegación">
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
+    </div>
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">
+                <img src="img/logo_v1.webp" alt="Buep Industries" class="logo-img">
+            </a>
+            
+            <div class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link active">Inicio</a>
+                <a href="#about" class="nav-link">Nosotros</a>
+                <a href="#services" class="nav-link">Servicios</a>
+                <a href="#projects" class="nav-link">Proyectos</a>
+                <a href="#technologies" class="nav-link">Tecnologías</a>
+                <a href="#contact" class="nav-link">Contacto</a>
+            </div>
+
+            <button class="nav-toggle" id="navToggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
             </button>
-            <div class="nav-menu" id="nav-menu">
-                <ul class="nav-list">
-                    <li><a href="#inicio" class="nav-button">Inicio</a></li>
-                    <li><a href="#sobre-nosotros" class="nav-button">Sobre Nosotros</a></li>
-                    <li><a href="#servicios" class="nav-button">Servicios</a></li>
-                    <li><a href="#proyectos" class="nav-button">Proyectos</a></li>
-                    <li><a href="#contacto" class="nav-button">Contacto</a></li>
-                </ul>
+        </div>
+        <div class="nav-progress" id="navProgress"></div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="particles" id="particles"></div>
+        </div>
+        
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="hero-subtitle">Innovación en</span>
+                <span class="hero-main" id="heroText"></span>
+                <span class="cursor">|</span>
+            </h1>
+            
+            <p class="hero-description">
+                Más de 15 años transformando la industria con soluciones de ingeniería 
+                electrónica y automatización de vanguardia
+            </p>
+            
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number" data-target="15">0</span>
+                    <span class="stat-label">Años de Experiencia</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-target="200">0</span>
+                    <span class="stat-label">Proyectos Completados</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-target="50">0</span>
+                    <span class="stat-label">Clientes Satisfechos</span>
+                </div>
             </div>
-        </nav>
-    </header>
-
-    <div class="main-container">
-
-        <section id="inicio" class="intro-section fade-in">
-            <div class="intro-content">
-                <h2 class="intro-title">Soluciones de Ingeniería Inteligentes</h2>
-                <p class="intro-text">En Buep Industries, combinamos la experiencia técnica con la innovación para crear
-                    soluciones duraderas y eficientes en electrónica, electricidad y automatización industrial.</p>
-                <a href="#contacto" class="cta-button">Contáctanos ahora</a>
+            
+            <div class="hero-cta">
+                <a href="#contact" class="btn btn-primary">
+                    <span>Iniciar Proyecto</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14m-7-7l7 7-7 7"/>
+                    </svg>
+                </a>
+                <a href="#services" class="btn btn-secondary">
+                    <span>Explorar Servicios</span>
+                </a>
             </div>
-        </section>
+        </div>
 
-        <section id="sobre-nosotros" class="card-menu fade-in">
-            <h2 class="section-title">Sobre Nosotros</h2>
-            <p><strong>Buep Industries</strong> es una empresa de ingeniería fundada por un equipo de profesionales con
-                <strong>más de 15
-                    años de experiencia</strong> en el desarrollo de soluciones electrónicas, eléctricas y de
-                automatización.
-                Nuestra trayectoria incluye la exitosa colaboración con multinacionales y empresas líderes en Argentina,
-                lo que nos ha permitido consolidar una sólida base de conocimientos y un compromiso inquebrantable con
-                la excelencia.</p>
-            <p style="margin-top: 1.5rem;">Nuestro propósito es combinar esta vasta experiencia técnica con la
-                innovación continua para crear sistemas confiables y eficientes, diseñados a medida para afrontar los
-                desafíos más complejos de nuestros clientes.</p>
-        </section>
+        <div class="hero-scroll">
+            <div class="scroll-indicator">
+                <span></span>
+            </div>
+        </div>
+    </section>
 
-        <section class="card-menu fade-in">
-            <h2 class="section-title">Nuestras Políticas</h2>
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Sobre Nosotros</span>
+                <h2 class="section-title">Ingeniería que Impulsa el Futuro</h2>
+            </div>
 
-            <div class="mission-vision-container">
-                <div class="policy-card">
-                    <h3 class="policy-title">Misión</h3>
-                    <p>Ofrecer soluciones de ingeniería electrónica, eléctrica y de automatización que impulsen la
-                        innovación y la eficiencia en la industria, superando las expectativas de nuestros clientes con
-                        un servicio de excelencia y un compromiso con la calidad.</p>
+            <div class="about-grid">
+                <div class="about-content">
+                    <p class="about-text">
+                        <strong>Buep Industries</strong> es una empresa argentina de ingeniería con más de 
+                        <strong>15 años de trayectoria</strong> en el desarrollo de soluciones tecnológicas 
+                        avanzadas para la industria.
+                    </p>
+                    <p class="about-text">
+                        Nuestro equipo de ingenieros especializados ha colaborado exitosamente con 
+                        multinacionales y empresas líderes, consolidando una sólida experiencia en 
+                        proyectos de alta complejidad técnica.
+                    </p>
+                    
+                    <div class="about-features">
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9 11l3 3L22 4"/>
+                                    <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/>
+                                </svg>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Calidad Certificada</h4>
+                                <p>Procesos y estándares internacionales</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Excelencia Técnica</h4>
+                                <p>Equipo altamente especializado</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <path d="M12 6v6l4 2"/>
+                                </svg>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Entrega Puntual</h4>
+                                <p>Cumplimiento garantizado de plazos</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="policy-card">
-                    <h3 class="policy-title">Visión</h3>
-                    <p>Ser el socio de ingeniería de referencia en Argentina, reconocidos por nuestra experiencia,
-                        fiabilidad y capacidad para desarrollar tecnologías a medida que transforman los procesos
-                        productivos y añaden valor sostenible a largo plazo.</p>
+                <div class="about-visual">
+                    <div class="timeline">
+                        <div class="timeline-item" data-year="2009">
+                            <h4>Fundación</h4>
+                            <p>Inicio de operaciones con foco en electrónica industrial</p>
+                        </div>
+                        <div class="timeline-item" data-year="2014">
+                            <h4>Expansión</h4>
+                            <p>Incorporación de servicios de automatización y PLC</p>
+                        </div>
+                        <div class="timeline-item" data-year="2018">
+                            <h4>Innovación IoT</h4>
+                            <p>Desarrollo de soluciones IoT para industria 4.0</p>
+                        </div>
+                        <div class="timeline-item" data-year="2024">
+                            <h4>Liderazgo</h4>
+                            <p>Referentes en ingeniería integral para alta tensión</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-header">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                                <path d="M2 17l10 5 10-5"/>
+                                <path d="M2 12l10 5 10-5"/>
+                            </svg>
+                        </div>
+                        <h3>Misión</h3>
+                    </div>
+                    <p>Ofrecer soluciones de ingeniería que impulsen la innovación y eficiencia industrial, 
+                    superando expectativas con excelencia y compromiso con la calidad.</p>
                 </div>
 
-                <div class="policy-card">
-                    <h3 class="policy-title">Valores</h3>
-                    <ul>
-                        <li>
-                            <p><strong>Innovación:</strong> Buscamos constantemente nuevas tecnologías y metodologías
-                                para ofrecer las soluciones más avanzadas.</p>
-                        </li>
-                        <li>
-                            <p><strong>Calidad:</strong> Nos comprometemos con la excelencia en cada proyecto, desde el
-                                diseño hasta la implementación.</p>
-                        </li>
-                        <li>
-                            <p><strong>Integridad:</strong> Actuamos con transparencia y honestidad en todas nuestras
-                                interacciones y decisiones.</p>
-                        </li>
-                        <li>
-                            <p><strong>Compromiso:</strong> Nos dedicamos a cumplir con los objetivos de nuestros
-                                clientes y a superar sus expectativas.</p>
-                        </li>
+                <div class="value-card">
+                    <div class="value-header">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                <circle cx="12" cy="12" r="3"/>
+                            </svg>
+                        </div>
+                        <h3>Visión</h3>
+                    </div>
+                    <p>Ser el socio de ingeniería de referencia en Latinoamérica, reconocidos por nuestra 
+                    capacidad para desarrollar tecnologías transformadoras.</p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-header">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/>
+                            </svg>
+                        </div>
+                        <h3>Valores</h3>
+                    </div>
+                    <ul class="value-list">
+                        <li>Innovación continua</li>
+                        <li>Calidad sin compromisos</li>
+                        <li>Integridad profesional</li>
+                        <li>Compromiso total</li>
                     </ul>
                 </div>
             </div>
-        </section>
-
-        <section id="servicios" class="card-menu fade-in">
-            <h2 class="section-title">Nuestros Servicios</h2>
-
-            <div class="service-category">
-                <h3>Ingeniería y Desarrollo</h3>
-                <ul class="service-list">
-                    <li>Diseño y desarrollo de electrónica y PCBs</li>
-                    <li>Desarrollo de ingenierías, incluyendo ingeniería eléctrica</li>
-                    <li>IoT (Internet of Things) y soluciones inteligentes</li>
-                    <li>Programación de PLC y automatización industrial</li>
-                    <li>Programación WEB para sistemas integrados</li>
-                </ul>
-            </div>
-
-            <div class="service-category">
-                <h3>Instalaciones y Montajes</h3>
-                <ul class="service-list">
-                    <li>Armado de tableros eléctricos, de potencia y control</li>
-                    <li>Armado de celdas de media tensión</li>
-                    <li>Instalación de tableros y salas eléctricas</li>
-                </ul>
-            </div>
-
-        </section>
-
-        <section id="proyectos" class="projects-section fade-in">
-            <h2 class="section-title">Nuestros Proyectos</h2>
-            <div id="projectCarousel" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="0" class="active"
-                        aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="1"
-                        aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="2"
-                        aria-label="Slide 3"></button>
-                    <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="3"
-                        aria-label="Slide 4"></button>
-                </div>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="project-card">
-                            <img src="https://via.placeholder.com/300x200.png?text=Proyecto+1"
-                                alt="Proyecto de Automatización Industrial" class="d-block w-100 project-img">
-                            <div class="project-info">
-                                <h3>Automatización Industrial</h3>
-                                <p>Implementación de un sistema de control para mejorar la eficiencia y seguridad en la
-                                    producción.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="project-card">
-                            <img src="https://via.placeholder.com/300x200.png?text=Proyecto+2"
-                                alt="Diseño de Placa Electrónica (PCB)" class="d-block w-100 project-img">
-                            <div class="project-info">
-                                <h3>Diseño de PCBs</h3>
-                                <p>Creación de una PCB personalizada para un dispositivo IoT, optimizando consumo y
-                                    conectividad.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="project-card">
-                            <img src="https://via.placeholder.com/300x200.png?text=Proyecto+3"
-                                alt="Sistemas de Monitoreo IoT" class="d-block w-100 project-img">
-                            <div class="project-info">
-                                <h3>Sistemas de Monitoreo IoT</h3>
-                                <p>Desarrollo de un sistema de monitoreo en tiempo real para variables ambientales
-                                    críticas en una planta.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="project-card">
-                            <img src="https://via.placeholder.com/300x200.png?text=Proyecto+4"
-                                alt="Tableros Eléctricos de Potencia" class="d-block w-100 project-img">
-                            <div class="project-info">
-                                <h3>Tableros Eléctricos</h3>
-                                <p>Diseño, armado e instalación de tableros de potencia y control para sistemas de alta
-                                    demanda.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-            </div>
-        </section>
-
-    </div>
-
-    <footer class="footer" id="contacto">
-        <h2 class="footer-title">Contacto</h2>
-        <div class="contact-info">
-            <p><a href="mailto:info@buepindustries.com">info@buepindustries.com</a></p>
-            <a href="https://api.whatsapp.com/send?phone=[TU_NUMERO_DE_TELEFONO]&text=Hola,%20me%20gustaría%20saber%20más%20sobre%20sus%20servicios."
-                class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                    <path fill="#ffffff"
-                        d="M380.9 97.1C339 55.1 283.1 32 223.9 32c-122.3 0-222 99.7-222 222 0 39.1 10.2 77.3 29.7 111l-39.7 141.6L98.1 439c38.4 19.4 81.3 29.6 126.9 29.6h1c122.4 0 222-99.7 222-222 0-59.3-22.1-115-64.1-157zm-119 144.9V193c0-14.7-11.9-26.6-26.6-26.6-14.7 0-26.6 11.9-26.6 26.6v49.9h-49.9c-14.7 0-26.6 11.9-26.6 26.6s11.9 26.6 26.6 26.6h49.9v49.9c0 14.7 11.9 26.6 26.6 26.6s26.6-11.9 26.6-26.6v-49.9h49.9c14.7 0 26.6-11.9 26.6-26.6s-11.9-26.6-26.6-26.6h-49.9z" />
-                </svg>
-            </a>
-            <p>Buenos Aires, Argentina</p>
         </div>
-        <p class="copyright">&copy; 2025 Buep Industries. Todos los derechos reservados.</p>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Servicios</span>
+                <h2 class="section-title">Soluciones Integrales de Ingeniería</h2>
+                <p class="section-subtitle">
+                    Expertise técnico y tecnología de punta para transformar sus proyectos en realidad
+                </p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card" data-category="development">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+                            <path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/>
+                        </svg>
+                    </div>
+                    <h3>Diseño de PCBs</h3>
+                    <p>Desarrollo de placas electrónicas personalizadas con tecnología de montaje superficial y through-hole</p>
+                    <ul class="service-features">
+                        <li>Diseño multicapa</li>
+                        <li>Alta frecuencia</li>
+                        <li>Prototipado rápido</li>
+                    </ul>
+                    <a href="#contact" class="service-link">
+                        <span>Consultar</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14m-7-7l7 7-7 7"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="service-card" data-category="automation">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                        </svg>
+                    </div>
+                    <h3>Automatización PLC</h3>
+                    <p>Programación y configuración de sistemas de control industrial para optimización de procesos</p>
+                    <ul class="service-features">
+                        <li>Siemens & Allen Bradley</li>
+                        <li>SCADA/HMI</li>
+                        <li>Redes industriales</li>
+                    </ul>
+                    <a href="#contact" class="service-link">
+                        <span>Consultar</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14m-7-7l7 7-7 7"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="service-card" data-category="iot">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12.55a11 11 0 0114.08 0"/>
+                            <path d="M8.53 16.11a6 6 0 016.95 0"/>
+                            <line x1="12" y1="20" x2="12.01" y2="20"/>
+                        </svg>
+                    </div>
+                    <h3>IoT Industrial</h3>
+                    <p>Soluciones de Internet de las Cosas para monitoreo remoto y análisis de datos en tiempo real</p>
+                    <ul class="service-features">
+                        <li>Sensores inteligentes</li>
+                        <li>Cloud computing</li>
+                        <li>Analytics & AI</li>
+                    </ul>
+                    <a href="#contact" class="service-link">
+                        <span>Consultar</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14m-7-7l7 7-7 7"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="service-card" data-category="electrical">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                        </svg>
+                    </div>
+                    <h3>Tableros Eléctricos</h3>
+                    <p>Diseño, armado e instalación de tableros de potencia, control y distribución eléctrica</p>
+                    <ul class="service-features">
+                        <li>Baja y media tensión</li>
+                        <li>Automatización</li>
+                        <li>Certificación normativa</li>
+                    </ul>
+                    <a href="#contact" class="service-link">
+                        <span>Consultar</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14m-7-7l7 7-7 7"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="service-card" data-category="engineering">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
+                            <polyline points="9 22 9 12 15 12 15 22"/>
+                        </svg>
+                    </div>
+                    <h3>Ingeniería Eléctrica</h3>
+                    <p>Desarrollo integral de proyectos eléctricos desde el diseño hasta la puesta en marcha</p>
+                    <ul class="service-features">
+                        <li>Cálculo y diseño</li>
+                        <li>Instalaciones industriales</li>
+                        <li>Eficiencia energética</li>
+                    </ul>
+                    <a href="#contact" class="service-link">
+                        <span>Consultar</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14m-7-7l7 7-7 7"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="service-card" data-category="web">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M2 12h20"/>
+                            <path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
+                        </svg>
+                    </div>
+                    <h3>Desarrollo Web Industrial</h3>
+                    <p>Interfaces web para sistemas embebidos y plataformas de gestión industrial</p>
+                    <ul class="service-features">
+                        <li>Dashboards en tiempo real</li>
+                        <li>Integración con PLCs</li>
+                        <li>Control remoto</li>
+                    </ul>
+                    <a href="#contact" class="service-link">
+                        <span>Consultar</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14m-7-7l7 7-7 7"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Portfolio</span>
+                <h2 class="section-title">Proyectos Destacados</h2>
+                <p class="section-subtitle">
+                    Casos de éxito que demuestran nuestra capacidad técnica y compromiso con la excelencia
+                </p>
+            </div>
+
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="automation">Automatización</button>
+                <button class="filter-btn" data-filter="electrical">Eléctrica</button>
+                <button class="filter-btn" data-filter="iot">IoT</button>
+                <button class="filter-btn" data-filter="pcb">PCB</button>
+            </div>
+
+            <div class="projects-grid">
+                <div class="project-card" data-category="automation">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/400x300.png?text=Automatización+Planta" alt="Automatización Industrial">
+                        <div class="project-overlay">
+                            <button class="project-view" data-project="1">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M15 3h6v6M14 10l6.5-6.5M21 14v7a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h7"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-tag">Automatización</span>
+                        <h3>Sistema SCADA Planta Química</h3>
+                        <p>Implementación completa de sistema de control y monitoreo para planta de procesamiento químico</p>
+                        <div class="project-stats">
+                            <div class="stat-item">
+                                <span class="stat-value">40%</span>
+                                <span class="stat-label">Reducción tiempos</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">99.9%</span>
+                                <span class="stat-label">Uptime</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="electrical">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/400x300.png?text=Tablero+MT" alt="Tablero Media Tensión">
+                        <div class="project-overlay">
+                            <button class="project-view" data-project="2">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M15 3h6v6M14 10l6.5-6.5M21 14v7a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h7"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-tag">Eléctrica</span>
+                        <h3>Celdas Media Tensión 33kV</h3>
+                        <p>Diseño e instalación de sistema de distribución en media tensión para parque industrial</p>
+                        <div class="project-stats">
+                            <div class="stat-item">
+                                <span class="stat-value">33kV</span>
+                                <span class="stat-label">Capacidad</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">12</span>
+                                <span class="stat-label">Celdas instaladas</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="iot">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/400x300.png?text=IoT+Monitoring" alt="Sistema IoT">
+                        <div class="project-overlay">
+                            <button class="project-view" data-project="3">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M15 3h6v6M14 10l6.5-6.5M21 14v7a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h7"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-tag">IoT</span>
+                        <h3>Monitoreo Ambiental IoT</h3>
+                        <p>Red de sensores inteligentes para monitoreo de variables ambientales críticas en tiempo real</p>
+                        <div class="project-stats">
+                            <div class="stat-item">
+                                <span class="stat-value">500+</span>
+                                <span class="stat-label">Sensores</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">24/7</span>
+                                <span class="stat-label">Monitoreo</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="pcb">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/400x300.png?text=PCB+Design" alt="Diseño PCB">
+                        <div class="project-overlay">
+                            <button class="project-view" data-project="4">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M15 3h6v6M14 10l6.5-6.5M21 14v7a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h7"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-tag">PCB</span>
+                        <h3>Controlador Industrial Custom</h3>
+                        <p>Desarrollo de PCB multicapa para sistema de control industrial de alta confiabilidad</p>
+                        <div class="project-stats">
+                            <div class="stat-item">
+                                <span class="stat-value">8</span>
+                                <span class="stat-label">Capas</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">HDI</span>
+                                <span class="stat-label">Tecnología</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="technologies" class="technologies">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Tecnologías</span>
+                <h2 class="section-title">Stack Tecnológico</h2>
+                <p class="section-subtitle">
+                    Herramientas y tecnologías de última generación para soluciones robustas
+                </p>
+            </div>
+
+            <div class="tech-categories">
+                <div class="tech-category">
+                    <h3>Automatización & Control</h3>
+                    <div class="tech-grid">
+                        <div class="tech-item">
+                            <div class="tech-icon">S7</div>
+                            <span>Siemens TIA Portal</span>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">AB</div>
+                            <span>Allen Bradley</span>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">WW</div>
+                            <span>Wonderware</span>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">MB</div>
+                            <span>Modbus</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tech-category">
+                    <h3>Diseño Electrónico</h3>
+                    <div class="tech-grid">
+                        <div class="tech-item">
+                            <div class="tech-icon">AD</div>
+                            <span>Altium Designer</span>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">KC</div>
+                            <span>KiCad</span>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">PS</div>
+                            <span>PSpice</span>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">LT</div>
+                            <span>LTspice</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tech-category">
+                    <h3>IoT & Software</h3>
+                    <div class="tech-grid">
+                        <div class="tech-item">
+                            <div class="tech-icon">AW</div>
+                            <span>AWS IoT</span>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">AZ</div>
+                            <span>Azure IoT</span>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">MQ</div>
+                            <span>MQTT</span>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">PY</div>
+                            <span>Python</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tech-category">
+                    <h3>Ingeniería Eléctrica</h3>
+                    <div class="tech-grid">
+                        <div class="tech-item">
+                            <div class="tech-icon">AC</div>
+                            <span>AutoCAD Electrical</span>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">EP</div>
+                            <span>EPLAN</span>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">ET</div>
+                            <span>ETAP</span>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">DI</div>
+                            <span>DIALux</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="certifications">
+                <h3>Certificaciones y Normativas</h3>
+                <div class="cert-grid">
+                    <div class="cert-item">ISO 9001</div>
+                    <div class="cert-item">IEC 61131</div>
+                    <div class="cert-item">UL Listed</div>
+                    <div class="cert-item">CE Mark</div>
+                    <div class="cert-item">IRAM</div>
+                    <div class="cert-item">AEA 90364</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Contacto</span>
+                <h2 class="section-title">Iniciemos su Proyecto</h2>
+                <p class="section-subtitle">
+                    Cuéntenos sobre sus necesidades y encontraremos la solución perfecta
+                </p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                        </div>
+                        <div class="info-content">
+                            <h4>Ubicación</h4>
+                            <p>Buenos Aires, Argentina</p>
+                            <p class="info-detail">Zona Norte GBA</p>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M3 9l9 6 9-6"/>
+                                <rect x="3" y="5" width="18" height="14" rx="2"/>
+                            </svg>
+                        </div>
+                        <div class="info-content">
+                            <h4>Email</h4>
+                            <a href="mailto:info@buepindustries.com">info@buepindustries.com</a>
+                            <p class="info-detail">Respuesta en 24h</p>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+                            </svg>
+                        </div>
+                        <div class="info-content">
+                            <h4>Teléfono</h4>
+                            <a href="https://wa.me/541234567890">+54 11 XXXX-XXXX</a>
+                            <p class="info-detail">Lun-Vie 9:00-18:00</p>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12 6 12 12 16 14"/>
+                            </svg>
+                        </div>
+                        <div class="info-content">
+                            <h4>Horario</h4>
+                            <p>Lunes a Viernes</p>
+                            <p class="info-detail">9:00 - 18:00 ART</p>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Nombre completo</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="company">Empresa</label>
+                            <input type="text" id="company" name="company">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Teléfono</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="service">Servicio de interés</label>
+                        <select id="service" name="service" required>
+                            <option value="">Seleccione un servicio</option>
+                            <option value="pcb">Diseño de PCBs</option>
+                            <option value="automation">Automatización PLC</option>
+                            <option value="iot">IoT Industrial</option>
+                            <option value="electrical">Tableros Eléctricos</option>
+                            <option value="engineering">Ingeniería Eléctrica</option>
+                            <option value="web">Desarrollo Web Industrial</option>
+                            <option value="other">Otro</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Mensaje</label>
+                        <textarea id="message" name="message" rows="5" required 
+                            placeholder="Describa su proyecto o necesidad..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block">
+                        <span>Enviar Consulta</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="22" y1="2" x2="11" y2="13"/>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="img/logo_v1.webp" alt="Buep Industries" class="footer-logo">
+                    <p>Ingeniería de excelencia para la industria del futuro</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="WhatsApp">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.149-.67.149-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.123-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Servicios</h4>
+                        <a href="#services">Diseño PCBs</a>
+                        <a href="#services">Automatización</a>
+                        <a href="#services">IoT Industrial</a>
+                        <a href="#services">Ingeniería Eléctrica</a>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4>Empresa</h4>
+                        <a href="#about">Sobre Nosotros</a>
+                        <a href="#projects">Proyectos</a>
+                        <a href="#technologies">Tecnologías</a>
+                        <a href="#contact">Contacto</a>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4>Recursos</h4>
+                        <a href="#">Blog Técnico</a>
+                        <a href="#">Casos de Estudio</a>
+                        <a href="#">Certificaciones</a>
+                        <a href="#">FAQ</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Buep Industries. Todos los derechos reservados.</p>
+                <div class="footer-legal">
+                    <a href="#">Políticas de Privacidad</a>
+                    <a href="#">Términos y Condiciones</a>
+                </div>
+            </div>
+        </div>
     </footer>
 
-    <script src="main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
-</body>
+    <button class="scroll-top" id="scrollTop" aria-label="Volver arriba">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 19V5M5 12l7-7 7 7"/>
+        </svg>
+    </button>
 
+    <div class="whatsapp-button">
+        <a href="https://wa.me/541234567890" target="_blank" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.149-.67.149-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.123-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+            </svg>
+        </a>
+    </div>
+
+    <script src="main.js"></script>
+</body>
 </html>
